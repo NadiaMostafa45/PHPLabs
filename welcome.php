@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $line = $fname . "," . $lname . "," . $addr . "," . $country . "," .
         $gender . "," . $skills . "," . $username . "," . $pass . "," . $dep . "\n";
 
-file_put_contents("data.txt", $line, FILE_APPEND);
+file_put_contents("users.txt", $line, FILE_APPEND);
 
     header("Location: list.php");
     exit;
