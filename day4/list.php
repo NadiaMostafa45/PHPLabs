@@ -2,6 +2,13 @@
 include "db.php";
 
 $result = mysqli_query($conn,"SELECT * FROM users");
+session_start();
+
+if(!isset($_SESSION["user"])){
+
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <h2>Users</h2>
